@@ -105,6 +105,20 @@ __-Mejorar el seguimiento de los lotes:__ Asegurar que se localice con precisió
 
 ### 3.1. Requisitos generales
 
+
+El sistema de SmartStorage centraliza y automatiza la organización de la empresa bajo los siguiente principios:
+
+  __Gestión de inventario por almacén:__ El sistema calcula y actualiza el stock físico de cada producto, registrando las entradas por compras y las salidas por ventas.
+
+  __Validación de Procesos:__ El sistema bloquea de forma automática las operaciones no permitidas, como procesar ventas sin stock suficiente o registrar cantidad y precios menores o iguales que cero.
+
+  __Seguimiento del pedido:__ Todas las operaciones de entrada de mercancía y gestión de pedidos quedan vinculadas al empleado responsable y cliente correspondiente.
+
+  __Exclusividad de datos:__ Para evitar que la información se duplique, cada producto debe tener un código único, los usuarios no pueden compartir el mismo correo electrónico y es obligatorio asignarle una categoría a cada artículo.
+
+  __Registro de precios:__ Al confirmar un pedido de venta o registrar una línea de compra, los precios unitarios y costos se mantienen fijos para que no se pueda alterar el historial.
+
+  
 ### 3.2. Usuarios del sistema
 
 ## 4. Catálogo de requisitos
