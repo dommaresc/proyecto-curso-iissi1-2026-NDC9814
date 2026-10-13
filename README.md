@@ -202,31 +202,27 @@ Requisito que realiza un registro del reabastecimiento de productos que ingresan
 
 Todo PRODUCTO debe pertenecer obligatoriamente a una única CATEGORIA.
 
-**R.N.02. Identificación de productos**
-
-Cada PRODUCTO debe tener un SKU único, de forma que no puedan existir dos productos con el mismo código identificativo.
-
-**R.N.03. Tipos de usuario**
+**R.N.02. Tipos de usuario**
 
 Un USUARIO puede estar registrado como CLIENTE o como EMPLEADO, pero nunca como ambos simultáneamente.
 
-**R.N.04. Gestión de pedidos**
+**R.N.03. Gestión de pedidos**
 
 Todo PEDIDO debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
 
-**R.N.05. Contenido de los pedidos**
+**R.N.04. Contenido de los pedidos**
 
 Todo PEDIDO debe contener al menos una LINEA_VENTA, correspondiente a un producto solicitado por el cliente.
 
-**R.N.06. Cantidades y precios de venta**
+**R.N.05. Cantidades y precios de venta**
 
 En cada LINEA_VENTA, la cantidad solicitada debe ser mayor que cero y el precio_unitario del producto también debe ser positivo.
 
-**R.N.07. Precio válido de los productos**
+**R.N.06. Precio válido de los productos**
 
 El precio de un PRODUCTO no podrá ser negativo, evitando registrar artículos con valores económicos incorrectos.
 
-**R.N.08. Disponibilidad de inventario**
+**R.N.07. Disponibilidad de inventario**
 
 No se podrá confirmar la venta de un PRODUCTO si la cantidad solicitada supera las unidades disponibles en STOCK. En ese caso, el pedido deberá rechazarse o quedar pendiente hasta disponer de suficientes unidades.
 
