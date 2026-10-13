@@ -196,9 +196,39 @@ Requisito que realiza un registro del reabastecimiento de productos que ingresan
 
 #### 4.1.2. Reglas de negocio
 
-##### R.N.01. Título regla negocio
+##### ### 4.1.2. Reglas de negocio
 
-Descripción de la regla de negocio.
+**RN01. Clasificación de productos**
+
+Todo PRODUCTO debe pertenecer obligatoriamente a una única CATEGORIA.
+
+**RN02. Identificación de productos**
+
+Cada PRODUCTO debe tener un SKU único, de forma que no puedan existir dos productos con el mismo código identificativo.
+
+**RN03. Tipos de usuario**
+
+Un USUARIO puede estar registrado como CLIENTE o como EMPLEADO, pero nunca como ambos simultáneamente.
+
+**RN04. Gestión de pedidos**
+
+Todo PEDIDO debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
+
+**RN05. Contenido de los pedidos**
+
+Todo PEDIDO debe contener al menos una LINEA_VENTA, correspondiente a un producto solicitado por el cliente.
+
+**RN06. Cantidades y precios de venta**
+
+En cada LINEA_VENTA, la cantidad solicitada debe ser mayor que cero y el precio_unitario del producto también debe ser positivo.
+
+**RN07. Cálculo del importe de los pedidos**
+
+El subtotal de cada LINEA_VENTA se calcula multiplicando la cantidad por el precio_unitario. El total del PEDIDO será la suma de los subtotales de todas sus líneas de venta.
+
+**RN08. Disponibilidad de inventario**
+
+No se podrá confirmar la venta de un PRODUCTO si la cantidad solicitada supera las unidades disponibles en STOCK. En ese caso, el pedido deberá rechazarse o quedar pendiente hasta disponer de suficientes unidades.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 
