@@ -125,7 +125,7 @@ El sistema de SmartStorage centraliza y automatiza la organización de la empres
 
 ### 4.1. Requisitos funcionales
 
-#### RF-01. Consultar el catálogo de productos
+#### ·RF-01. Consultar el catálogo de productos
 
 Como cliente, quiero consultar el catálogo de productos y filtrarlos por categoría, para encontrar los que necesito comprar.
 
@@ -137,7 +137,7 @@ Suponemos que existen productos pertenecientes a la categoría «Herramientas»,
 
 Suponemos que no existen productos en la categoría seleccionada, cuando el cliente realice la consulta el sistema mostrará un mensaje indicando que no se han encontrado productos, sin mostrar artículos de otras categorías.
 
-#### RF-02. Registrar productos en el sistema
+#### ·RF-02. Registrar productos en el sistema
 
 Como administrador del inventario, quiero registrar nuevos productos con un código único, un nombre, un precio y una categoría, para mantener actualizado el catálogo de artículos.
 
@@ -153,7 +153,7 @@ Dado que el código «PROD-101» ya pertenece a otro producto, cuando el adminis
 
 Dado que el código «PROD-101» no está registrado pero la categoría no existe, cuando el administrador intenta registrar el producto, el sistema rechaza el registro e informa de que la categoría no existe.
 
-#### RF-03. Consultar el stock por producto y almacén
+#### ·RF-03. Consultar el stock por producto y almacén
 
 Como gestor de inventario, quiero consultar las unidades disponibles de cada producto en un almacén concreto, para conocer el stock existente antes de gestionar una operación.
 
@@ -165,7 +165,7 @@ Suponiendo que el producto «PROD-101» tiene 25 unidades en el almacén de Sevi
 
 Suponiendo que el empleado consulta el stock de un código de producto inexistente, cuando realice la búsqueda el sistema informará de que el producto no está registrado y no presentará una cantidad de stock inventada.
 
-#### RF-04. Registrar la recepción de mercancías de un proveedor
+#### ·RF-04. Registrar la recepción de mercancías de un proveedor
 
 Como encargado de almacén, quiero registrar las mercancías recibidas de los proveedores indicando el producto, la cantidad, el coste unitario y el almacén de destino, para mantener actualizado el inventario.
 
@@ -181,7 +181,7 @@ Suponemos que el encargado está registrando una recepción de mercancías, si i
 
 Suponemos que el encargado está registrando una recepción de mercancías, si introduce una cantidad igual a cero, entonces el sistema rechazará la operación, informará del error y mantendrá sin cambios el stock anterior.
 
-#### RF-05. Consultar la ubicación de un producto
+#### ·RF-05. Consultar la ubicación de un producto
 
 Como operario de almacén, quiero consultar la ubicación física de un producto, para localizarlo rápidamente durante la preparación de los pedidos.
 
@@ -193,7 +193,65 @@ Dado que el producto «PROD-101» está ubicado en el pasillo 2, estantería 3, 
 
 Dado que un producto no tiene ninguna ubicación registrada, cuando el operario intente localizarlo, el sistema informará de que no dispone de una ubicación asignada, sin mostrar una localización incorrecta.
 
-//TODO
+#### ·RF-06. Crear pedidos de clientes
+
+Como cliente, quiero crear un pedido que contenga uno o varios productos y sus cantidades, para solicitar la compra de los artículos que necesito.
+
+[Prueba de aceptación positiva — PAP-06.1]
+
+Cuando un cliente registrado crea un pedido que contiene al menos una línea de venta con cantidades válidas, el sistema registra el pedido y lo asocia al cliente correspondiente.
+
+[Prueba de aceptación negativa — PAN-06.1]
+
+Si un cliente intenta confirmar un pedido sin incluir ninguna línea de venta, el sistema rechaza la operación y muestra un mensaje indicando que debe añadir al menos un producto.
+
+#### ·RF-07. Validar el stock antes de confirmar una venta
+
+Como empleado responsable de procesar pedidos, quiero que el sistema compruebe la disponibilidad de los productos antes de confirmar una venta, para evitar comprometer mercancía que no existe en el inventario.
+
+[Prueba de aceptación positiva — PAP-07.1]
+
+Al confirmar la venta de un producto del que hay 10 unidades disponibles y se solicitan 4, el sistema acepta la operación y actualiza el stock a 6 unidades.
+
+[Prueba de aceptación negativa — PAN-07.1]
+
+Cuando se intenta confirmar una venta de 8 unidades de un producto del que solo quedan 5 disponibles, el sistema bloquea la operación por falta de stock y mantiene las 5 unidades en el inventario.
+
+#### ·RF-08. Validar los productos durante la preparación de un pedido
+
+Como operario de almacén, quiero comprobar que los productos y las cantidades recogidos coinciden con las líneas del pedido, para evitar enviar artículos incorrectos a los clientes.
+
+[Prueba de aceptación positiva — PAP-08.1]
+
+La preparación de un pedido se valida correctamente cuando el operario recoge las 3 unidades solicitadas del producto «PROD-101» y confirma que la referencia y la cantidad coinciden con las indicadas en el pedido.
+
+[Prueba de aceptación negativa — PAN-08.1]
+
+Si el pedido solicita el producto «PROD-101» y el operario intenta validar el producto «PROD-202», el sistema impide confirmar esa línea e informa de que la referencia recogida no coincide con la solicitada.
+
+#### ·RF-09. Gestionar el estado de los pedidos
+
+Como empleado responsable de los envíos, quiero consultar y actualizar el estado de los pedidos, para conocer su situación y realizar un seguimiento de su entrega.
+
+[Prueba de aceptación positiva — PAP-09.1]
+
+Tras seleccionar un estado válido para un pedido —«pendiente», «en preparación», «enviado» o «entregado»—, el empleado guarda la modificación y puede consultar posteriormente el nuevo estado del pedido.
+
+[Prueba de aceptación negativa — PAN-09.1]
+
+Si el empleado introduce un estado no admitido, como «en ruta», el sistema rechaza la modificación, muestra un mensaje de error y conserva el estado anterior del pedido.
+
+#### ·RF-10. Registrar usuarios y controlar sus tipos
+
+Como administrador del sistema, quiero registrar usuarios con un correo electrónico único y asignarles un tipo de usuario, cliente o empleado, para mantener sus perfiles identificados y evitar duplicidades.
+
+[Prueba de aceptación positiva — PAP-10.1]
+
+Al registrar un usuario con un correo electrónico que todavía no está asociado a ninguna cuenta y asignarle el tipo «cliente», el sistema crea el perfil correctamente y permite consultarlo posteriormente.
+
+[Prueba de aceptación negativa — PAN-10.1]
+
+Cuando se intenta registrar un usuario como cliente y empleado al mismo tiempo, el sistema rechaza la operación e informa de que ambos tipos de usuario son excluyentes.
 
 #### 4.1.1. Requisitos de información
 
