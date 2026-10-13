@@ -145,6 +145,14 @@ Como [tipo de usuario]
 quiero [servicio]
 para [razón]
 
+##### R.I.01. Información de Usuario
+
+Requisito el cual necesita nombre completo, correo electrónico contraseña, teléfono, fecha de registro y estado del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
+
+##### R.I.01. Información de Cliente
+
+Requisito el cual necesita nombre completo, correo electrónico contraseña, teléfono, fecha de registro y estado del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
+
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
 - Descripción de la segunda comprobación a realizar
