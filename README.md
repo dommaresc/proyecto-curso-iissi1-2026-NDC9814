@@ -165,6 +165,29 @@ Requisito de información que necesita un nombre, un precio y asociado obligator
 
 Requisito que está caracterizado por un nombre de categoría y una descripción de esta, para poder realizar una clasificación de los productos y poder organizarlos en un catálogo.
 
+##### R.I.06. Información de Almacén
+
+Requisito representado por nombre, dirección física completa y capacidad máxima de almacenamiento. Se guarda la información para gestionar el centro de distribución donde se resguarda el inventario que gestionan los empleados de la empresa.
+
+##### R.I.07. Información de Stock
+
+Requisito que se usa para realizar una relación entre el producto y el almacén, para poder registrar la disponibilidad física y lógica de los productos en la empresa. Esta información necesita de datos sobre la cantidad física disponibles y cantidad reservada para pedidos para poder hacer control del stock.
+
+##### R.I.08. Información de Proveedor
+
+Requisito que controla los datos de una entidad externa que suministra los productos, con la cual se registran las líneas de compra. Para realizar este control se necesita el DNI/NIF, correo electrónico, teléfono y dirección de cada proveedor asociado a la empresa.
+
+##### R.I.09. Información de Pedido
+
+Requisito para realizar un registro de la transacción de compra realizado por un por un cliente. Este requisito está relacionado con producto y almacén ya que necesita la información de ambos para poder guardar la información del pedido, también es necesario saber que es realizado por un cliente y procesado por un empleado, el cual contiene una o más líneas de venta, un estado, una fecha, la cantidad de productos y el precio total.
+
+##### R.I.10. Información de Línea de Venta
+
+Requisito el cual está asociado a las requisitos de pedido, producto y almacén. Este guarda los detalles sobre los productos incluidos en un pedido de cliente, que especifica la cantidad solicitada, el precio unitario y el precio total correspondiente.
+
+##### R.I.11. Información de Línea de Compra
+
+Requisito que realiza un registro del reabastecimiento de productos que ingresan desde un proveedor a un almacén. Este requisito está asociado al proveedor, al producto y al almacén, ya que se necesita esta información para detallar como se ha realizado la venta. Además, también es necesario saber cantidad comprada, precio total y fecha de recepción. 
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
