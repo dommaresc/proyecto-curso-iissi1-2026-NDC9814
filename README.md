@@ -1,10 +1,10 @@
 # Título Proyecto: __SmartStorage__
 
-## Miembros del grupo LX-XXX-X (sustituir)
+## Miembros del grupo L2-ABS-6
 
 1. Calzadilla Buiza, Alberto
 1. Marzoug Yous, Ibrahim
-1. Apellidos, Nombre
+1. Páez Sosa, Álvaro
 1. Apellidos, Nombre
 
 ## 1. Introducción al problema
@@ -125,17 +125,75 @@ El sistema de SmartStorage centraliza y automatiza la organización de la empres
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### RF-01. Consultar el catálogo de productos
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente, quiero consultar el catálogo de productos y filtrarlos por categoría, para encontrar los que necesito comprar.
 
-**Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+[Prueba de aceptación positiva — PAP-01.1]
+
+Suponemos que existen productos pertenecientes a la categoría «Herramientas», cuando el cliente consulte dicha categoría el sistema mostrará los productos correspondientes con su nombre y precio.
+
+[Prueba de aceptación negativa — PAN-01.1]
+
+Suponemos que no existen productos en la categoría seleccionada, cuando el cliente realice la consulta el sistema mostrará un mensaje indicando que no se han encontrado productos, sin mostrar artículos de otras categorías.
+
+#### RF-02. Registrar productos en el sistema
+
+Como administrador del inventario, quiero registrar nuevos productos con un código único, un nombre, un precio y una categoría, para mantener actualizado el catálogo de artículos.
+
+[Prueba de aceptación positiva — PAP-02.1]
+
+Dado que el código «PROD-101» no está registrado y la categoría seleccionada existe, cuando el administrador introduce los datos válidos del producto, el sistema guarda el artículo y lo muestra en el catálogo.
+
+[Prueba de aceptación negativa — PAN-02.1]
+
+Dado que el código «PROD-101» ya pertenece a otro producto, cuando el administrador intenta registrar un segundo producto con ese mismo código, el sistema rechaza el registro e informa de que el código ya existe.
+
+[Prueba de aceptación negativa — PAN-02.2]
+
+Dado que el código «PROD-101» no está registrado pero la categoría no existe, cuando el administrador intenta registrar el producto, el sistema rechaza el registro e informa de que la categoría no existe.
+
+#### RF-03. Consultar el stock por producto y almacén
+
+Como gestor de inventario, quiero consultar las unidades disponibles de cada producto en un almacén concreto, para conocer el stock existente antes de gestionar una operación.
+
+[Prueba de aceptación positiva — PAP-03.1]
+
+Suponiendo que el producto «PROD-101» tiene 25 unidades en el almacén de Sevilla, cuando el empleado consulte su stock en dicho almacén el sistema mostrará que hay 25 unidades disponibles.
+
+[Prueba de aceptación negativa — PAN-03.1]
+
+Suponiendo que el empleado consulta el stock de un código de producto inexistente, cuando realice la búsqueda el sistema informará de que el producto no está registrado y no presentará una cantidad de stock inventada.
+
+#### RF-04. Registrar la recepción de mercancías de un proveedor
+
+Como encargado de almacén, quiero registrar las mercancías recibidas de los proveedores indicando el producto, la cantidad, el coste unitario y el almacén de destino, para mantener actualizado el inventario.
+
+[Prueba de aceptación positiva — PAP-04.1]
+
+Suponemos que un producto tiene 10 unidades registradas en el almacén, cuando el encargado registre la recepción válida de 20 unidades adicionales, el sistema registrará la compra y actualizará el stock a 30 unidades.
+
+[Prueba de aceptación negativa — PAN-04.1]
+
+Suponemos que el encargado está registrando una recepción de mercancías, si introduce una cantidad igual a cero, entonces el sistema rechazará la operación, informará del error y mantendrá sin cambios el stock anterior.
+
+[Prueba de aceptación negativa — PAN-04.2]
+
+Suponemos que el encargado está registrando una recepción de mercancías, si introduce una cantidad igual a cero, entonces el sistema rechazará la operación, informará del error y mantendrá sin cambios el stock anterior.
+
+#### RF-05. Consultar la ubicación de un producto
+
+Como operario de almacén, quiero consultar la ubicación física de un producto, para localizarlo rápidamente durante la preparación de los pedidos.
+
+[Prueba de aceptación positiva — PAP-05.1]
+
+Dado que el producto «PROD-101» está ubicado en el pasillo 2, estantería 3, cuando el operario consulte su ubicación, el sistema mostrará esos datos para facilitar su localización.
+
+[Prueba de aceptación negativa — PAN-05.1]
+
+Dado que un producto no tiene ninguna ubicación registrada, cuando el operario intente localizarlo, el sistema informará de que no dispone de una ubicación asignada, sin mostrar una localización incorrecta.
+
+//TODO
 
 #### 4.1.1. Requisitos de información
 
