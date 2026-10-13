@@ -3,7 +3,7 @@
 ## Miembros del grupo LX-XXX-X (sustituir)
 
 1. Calzadilla Buiza, Alberto
-1. Apellidos, Nombre
+1. Marzoug Yous, Ibrahim
 1. Apellidos, Nombre
 1. Apellidos, Nombre
 
