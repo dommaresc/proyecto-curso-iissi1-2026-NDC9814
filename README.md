@@ -198,39 +198,50 @@ Requisito que realiza un registro del reabastecimiento de productos que ingresan
 
 ##### ### 4.1.2. Reglas de negocio
 
-**RN01. Clasificación de productos**
+**R.N.01. Clasificación de productos**
 
 Todo PRODUCTO debe pertenecer obligatoriamente a una única CATEGORIA.
 
-**RN02. Identificación de productos**
+**R.N.02. Identificación de productos**
 
 Cada PRODUCTO debe tener un SKU único, de forma que no puedan existir dos productos con el mismo código identificativo.
 
-**RN03. Tipos de usuario**
+**R.N.03. Tipos de usuario**
 
 Un USUARIO puede estar registrado como CLIENTE o como EMPLEADO, pero nunca como ambos simultáneamente.
 
-**RN04. Gestión de pedidos**
+**R.N.04. Gestión de pedidos**
 
 Todo PEDIDO debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
 
-**RN05. Contenido de los pedidos**
+**R.N.05. Contenido de los pedidos**
 
 Todo PEDIDO debe contener al menos una LINEA_VENTA, correspondiente a un producto solicitado por el cliente.
 
-**RN06. Cantidades y precios de venta**
+**R.N.06. Cantidades y precios de venta**
 
 En cada LINEA_VENTA, la cantidad solicitada debe ser mayor que cero y el precio_unitario del producto también debe ser positivo.
 
-**RN07. Cálculo del importe de los pedidos**
+**R.N.07. Precio válido de los productos**
 
-El subtotal de cada LINEA_VENTA se calcula multiplicando la cantidad por el precio_unitario. El total del PEDIDO será la suma de los subtotales de todas sus líneas de venta.
+El precio de un PRODUCTO no podrá ser negativo, evitando registrar artículos con valores económicos incorrectos.
 
-**RN08. Disponibilidad de inventario**
+**R.N.08. Disponibilidad de inventario**
 
 No se podrá confirmar la venta de un PRODUCTO si la cantidad solicitada supera las unidades disponibles en STOCK. En ese caso, el pedido deberá rechazarse o quedar pendiente hasta disponer de suficientes unidades.
 
 ### 4.2. Mapa de historias de usuario (opcional)
+H.U.01: Como CLIENTE, quiero consultar los productos disponibles para conocer los artículos que puedo comprar.
+
+H.U.02: Como CLIENTE, quiero realizar pedidos de productos para adquirir los artículos que necesito.
+
+H.U.03: Como CLIENTE, quiero consultar el estado de mis pedidos para conocer su situación.
+
+H.U.04: Como EMPLEADO, quiero consultar el stock de los productos para conocer las unidades disponibles en cada almacén.
+
+H.U.05: Como EMPLEADO, quiero procesar los pedidos de los clientes para gestionar las ventas.
+
+H.U.06: Como EMPLEADO, quiero registrar las compras recibidas de los proveedores para mantener actualizado el inventario.
 
 ### 4.3. Requisitos no funcionales (opcional)
 
@@ -238,6 +249,22 @@ No se podrá confirmar la venta de un PRODUCTO si la cantidad solicitada supera 
 Como [tipo de usuario]
 quiero [servicio]
 para [razón]
+
+R.N.F.01. Facilidad de uso
+
+Como USUARIO, quiero que el sistema tenga una interfaz sencilla e intuitiva para poder utilizarlo sin dificultades.
+
+R.N.F.02. Seguridad
+
+Como USUARIO, quiero que mis datos personales estén protegidos para evitar que otras personas puedan acceder a ellos sin autorización.
+
+R.N.F.03. Rendimiento
+
+Como CLIENTE, quiero que las consultas de productos se realicen rápidamente para poder consultar el catálogo sin largas esperas.
+
+R.N.F.04. Compatibilidad
+
+Como USUARIO, quiero que el sistema funcione en distintos navegadores web para poder acceder a él desde diferentes ordenadores.
 
 -- fin entregable 1 --
 
