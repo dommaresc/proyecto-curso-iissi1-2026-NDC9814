@@ -151,7 +151,20 @@ Requisito el cual necesita nombre completo, correo electrónico (único), númer
 
 ##### R.I.02. Información de Cliente
 
-Requisito asociado al usuario el cual necesita información guardada como usuario y una dirección, para guardar la información de los usuarios que realizan pedidos de compra en la plataforma. 
+Requisito asociado al usuario el cual guarda la información de los usuarios que realizan pedidos de compra en la plataforma. Se necesitan los datos del usuario y la dirección de envío. 
+
+##### R.I.03. Información de Empleado
+
+Requisito asociado al usuario el cual  guarda la información operativa del personal que gestiona el inventario y la logística. Se requieren los datos del usuario, puesto de trabajo y fecha de ingreso, para poder realizar una distribución uniforme de los empleados.
+
+##### R.I.04. Información de Producto
+
+Requisito de información que necesita un nombre, un precio y asociado obligatoriamente a una categoría y uno o varios proveedores. Se usa para realizar un catálogo completo de artículos que la empresa vende o gestiona dentro de sus almacenes.
+
+##### R.I.05. Información de Categoría
+
+Requisito que está caracterizado por un nombre de categoría y una descripción de esta, para poder realizar una clasificación de los productos y poder organizarlos en un catálogo.
+
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
