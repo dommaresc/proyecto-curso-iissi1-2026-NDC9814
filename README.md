@@ -90,7 +90,7 @@ __-Mejorar el seguimiento de los lotes:__ Asegurar que se localice con precisió
 | Término | Imagen | Descripción |
 | :--- | :---: | :--- |
 | **Almacén** | <img width="740" height="494" alt="image" src="https://github.com/user-attachments/assets/17ad5df0-43db-4e74-b8f6-a7e3a4af9456" /> | Instalación física, gestionada por un empleado, encargada del almanaje de bienes dentro de la cadena de suministro |
-| **Categoría** | <<img width="229" height="148" alt="image" src="https://github.com/user-attachments/assets/4a3330e6-9bd4-44e3-8795-b378ce4aaa4e" /> | Agrupación de productos que permite estructurar el catálogo. |
+| **Categoría** | <img width="229" height="148" alt="image" src="https://github.com/user-attachments/assets/4a3330e6-9bd4-44e3-8795-b378ce4aaa4e" /> | Agrupación de productos que permite estructurar el catálogo. |
 | **Cliente** |<img width="450" height="346" alt="image" src="https://github.com/user-attachments/assets/5bc3d3c0-5847-4a78-8f5a-db451551db3a" /> | Tipo de usuario externo del sistema que realiza pedidos de compra y cuenta con datos asociados de teléfono y dirección. |
 | **Empleado** | <img width="612" height="408" alt="image" src="https://github.com/user-attachments/assets/a85b7b3a-0311-4f63-8e0b-9247fcd3594c" /> | Tipo de usuario interno de la organización vinculado a un puesto de trabajo y fecha de ingreso, encargado de gestionar almacenes, procesar pedidos y aprobar compras. |
 | **Línea de Compra** | <img width="304" height="166" alt="image" src="https://github.com/user-attachments/assets/77283850-08d9-4efe-9363-da3cc5864017" /> | Detalle de los artículos recibidos de un proveedor en un almacén específico, indicando cantidad, costo unitario, fecha, producto y el empleado que gestiona la recepción. |
