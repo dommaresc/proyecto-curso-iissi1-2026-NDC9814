@@ -91,7 +91,7 @@ __-Mejorar el seguimiento de los lotes:__ Asegurar que se localice con precisió
 | :--- | :---: | :--- |
 | **Almacén** | <img width="740" height="494" alt="image" src="https://github.com/user-attachments/assets/17ad5df0-43db-4e74-b8f6-a7e3a4af9456" /> | Instalación física, gestionada por un empleado, encargada del almanaje de bienes dentro de la cadena de suministro |
 | **Categoría** | <img width="229" height="148" alt="image" src="https://github.com/user-attachments/assets/4a3330e6-9bd4-44e3-8795-b378ce4aaa4e" /> | Agrupación de productos que permite estructurar el catálogo. |
-| **Cliente** |<img width="450" height="346" alt="image" src="https://github.com/user-attachments/assets/5bc3d3c0-5847-4a78-8f5a-db451551db3a" /> | Tipo de usuario externo del sistema que realiza pedidos de compra y cuenta con datos asociados de teléfono y dirección. |
+| **Cliente** |<img width="450" height="346" alt="image" src="https://github.com/user-attachments/assets/5bc3d3c0-5847-4a78-8f5a-db451551db3a" /> | Tipo de usuario externo del sistema que realiza pedidos de compra y cuenta con datos asociados a su usuario e incluir la dirección para localizar a este cliente. |
 | **Empleado** | <img width="612" height="408" alt="image" src="https://github.com/user-attachments/assets/a85b7b3a-0311-4f63-8e0b-9247fcd3594c" /> | Tipo de usuario interno de la organización vinculado a un puesto de trabajo y fecha de ingreso, encargado de gestionar almacenes, procesar pedidos y aprobar compras. |
 | **Línea de Compra** | <img width="304" height="166" alt="image" src="https://github.com/user-attachments/assets/77283850-08d9-4efe-9363-da3cc5864017" /> | Detalle de los artículos recibidos de un proveedor en un almacén específico, indicando cantidad, costo unitario, fecha, producto y el empleado que gestiona la recepción. |
 | **Línea de Venta** | <img width="554" height="554" alt="image" src="https://github.com/user-attachments/assets/e9b75103-6c5f-4e17-8985-65575db2f84b" />| Detalle de los productos incluidos en un pedido de cliente, que especifica la cantidad solicitada, el precio unitario y el subtotal correspondiente. |
@@ -99,7 +99,7 @@ __-Mejorar el seguimiento de los lotes:__ Asegurar que se localice con precisió
 | **Producto** | <img width="447" height="447" alt="image" src="https://github.com/user-attachments/assets/df2b13ae-10a4-4730-a6e8-bc3f129369e2" /> | Artículo comercializado en el sistema, caracterizado por un nombre, un precio y asociado obligatoriamente a una categoría y uno o varios proveedores. |
 | **Proveedor** | <img width="632" height="486" alt="image" src="https://github.com/user-attachments/assets/fb02b951-820a-4e11-9a8a-ac7f3a82c972" /> | Entidad externa que suministra los productos, con la cual se registran las líneas de compra. |
 | **Stock** | <img width="1024" height="594" alt="image" src="https://github.com/user-attachments/assets/dc8ac227-28db-45d7-a7dd-1c7c482ce456" /> | Cantidad disponible de un producto específico en un almacén determinado, calculada en función de las entradas por compras y las salidas por ventas. |
-| **Usuario** | <img width="447" height="447" alt="image" src="https://github.com/user-attachments/assets/5b2de0e6-8bf7-414c-904f-00eb4989f53f" /> | Entidad base del sistema que cuenta con un identificador, un correo electrónico único y un rol, especializándose exclusivamente como cliente o como empleado. |
+| **Usuario** | <img width="447" height="447" alt="image" src="https://github.com/user-attachments/assets/5b2de0e6-8bf7-414c-904f-00eb4989f53f" /> | Entidad base del sistema que cuenta con un identificador, un correo electrónico único, una contraseña, un teléfono de contacto y un rol, especializándose exclusivamente como cliente o como empleado. |
 
 ## 3. Visión general del sistema
 
@@ -147,11 +147,11 @@ para [razón]
 
 ##### R.I.01. Información de Usuario
 
-Requisito el cual necesita nombre completo, correo electrónico contraseña, teléfono, fecha de registro y estado del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
+Requisito el cual necesita nombre completo, correo electrónico (único), número de teléfono, contraseña y rol del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
 
-##### R.I.01. Información de Cliente
+##### R.I.02. Información de Cliente
 
-Requisito el cual necesita nombre completo, correo electrónico contraseña, teléfono, fecha de registro y estado del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
+Requisito asociado al usuario el cual necesita información guardada como usuario y una dirección, para guardar la información de los usuarios que realizan pedidos de compra en la plataforma. 
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
