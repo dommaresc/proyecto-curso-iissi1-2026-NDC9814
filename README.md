@@ -147,47 +147,47 @@ para [razón]
 
 ##### R.I.01. Información de Usuario
 
-Requisito el cual necesita nombre completo, correo electrónico (único), número de teléfono, contraseña y rol del usuario para que el sistema pueda almacenar la información sobre todas las personas registradas en la base de datos de la plataforma para poder tener un registro de sus datos.
+Como administrador del sistema quiero gestionar los perfiles de usuario, roles y datos de acceso de los usuarios para garantizar la seguridad de la información de cada uno de los usuarios y restringir las operaciones según el rol de cada empleado.
 
 ##### R.I.02. Información de Cliente
 
-Requisito asociado al usuario el cual guarda la información de los usuarios que realizan pedidos de compra en la plataforma. Se necesitan los datos del usuario y la dirección de envío. 
+Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
 
 ##### R.I.03. Información de Empleado
 
-Requisito asociado al usuario el cual  guarda la información operativa del personal que gestiona el inventario y la logística. Se requieren los datos del usuario, puesto de trabajo y fecha de ingreso, para poder realizar una distribución uniforme de los empleados.
+Como responsable de los empleados quiero mantener actualizada la información personal, laboral y de turnos del personal del almacén para controlar la asignación de tareas y roles de cada uno de ellos y poder ver cual es el rendimiento de los trabajadores.
 
 ##### R.I.04. Información de Producto
 
-Requisito de información que necesita un nombre, un precio y asociado obligatoriamente a una categoría y uno o varios proveedores. Se usa para realizar un catálogo completo de artículos que la empresa vende o gestiona dentro de sus almacenes.
+Como administrador del inventario quiero registrar las características detalladas de cada artículo como por ejemplo: dimensiones, peso y precio; para identificar, ubicar y vender correctamente la mercancía disponible en el almacén.
 
 ##### R.I.05. Información de Categoría
 
-Requisito que está caracterizado por un nombre de categoría y una descripción de esta, para poder realizar una clasificación de los productos y poder organizarlos en un catálogo.
+Como administrador del catálogo de productos quiero organizar los productos en categorías para facilitar la búsqueda y el análisis del stock necesario por tipos de productos.
 
 ##### R.I.06. Información de Almacén
 
-Requisito representado por nombre, dirección física completa y capacidad máxima de almacenamiento. Se guarda la información para gestionar el centro de distribución donde se resguarda el inventario que gestionan los empleados de la empresa.
+Como responsable de almacenaje quiero gestionar las zonas, pasillos y ubicaciones físicas del almacén para optimizar las rutas de recogida y la distribución del espacio disponible para cada categoría de productos disponibles.
 
 ##### R.I.07. Información de Stock
 
-Requisito que se usa para realizar una relación entre el producto y el almacén, para poder registrar la disponibilidad física y lógica de los productos en la empresa. Esta información necesita de datos sobre la cantidad física disponibles y cantidad reservada para pedidos para poder hacer control del stock.
+Como gestor de inventario quiero poder controlar en tiempo real la disponibilidad, las entradas, las ventas y la cantidad mínimos de cada prodcuto para evitar llegar a un stock nulo y planificar un reabastecimiento de los productos los cuales están llegando al mínimo de disponibilidad.
 
 ##### R.I.08. Información de Proveedor
 
-Requisito que controla los datos de una entidad externa que suministra los productos, con la cual se registran las líneas de compra. Para realizar este control se necesita el DNI/NIF, correo electrónico, teléfono y dirección de cada proveedor asociado a la empresa.
+Como responsable del almacén quiero administrar la información de contacto, plazos de entrega y condiciones de los proveedores para coordinar las compras de mercancía de manera eficiente, para poder hacer un seguimiento de los productos que nos ofrecen los proveedores.
 
 ##### R.I.09. Información de Pedido
 
-Requisito para realizar un registro de la transacción de compra realizado por un por un cliente. Este requisito está relacionado con producto y almacén ya que necesita la información de ambos para poder guardar la información del pedido, también es necesario saber que es realizado por un cliente y procesado por un empleado, el cual contiene una o más líneas de venta, un estado, una fecha, la cantidad de productos y el precio total.
+Como administrador en los envíos de porductos a los clientes quiero registrar y hacer seguimiento del estado de los pedidos de venta (pendiente, en preparación, enviado, entregado) para cumplir con los plazos de entrega acordado previamente con el cliente a la hora de realizar el pedido.
 
 ##### R.I.10. Información de Línea de Venta
 
-Requisito el cual está asociado a las requisitos de pedido, producto y almacén. Este guarda los detalles sobre los productos incluidos en un pedido de cliente, que especifica la cantidad solicitada, el precio unitario y el precio total correspondiente.
+Como gestor de la venta de los productos quiero detallar cada producto, cantidad y precio de cada venta específica para poder controlar automáticamente el stock correspondiente y poder gestionar los productos en venta disponibles .
 
 ##### R.I.11. Información de Línea de Compra
 
-Requisito que realiza un registro del reabastecimiento de productos que ingresan desde un proveedor a un almacén. Este requisito está asociado al proveedor, al producto y al almacén, ya que se necesita esta información para detallar como se ha realizado la venta. Además, también es necesario saber cantidad comprada, precio total y fecha de recepción. 
+Como responsable de compras quiero registrar las cantidades específicas y los costes acordados para cada artículo de compra realizado por cada proveedor para verificar que la recepción de la mercancía ha sido correcta y actualizar los costes de los productos dsiponibles en el inventario. 
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
