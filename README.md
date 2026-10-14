@@ -171,7 +171,7 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 [Prueba de aceptación positiva — PAP-03.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Suponiendo que el producto «PROD-101» tiene 25 unidades en el almacén de Sevilla, cuando el empleado consulte su stock en dicho almacén el sistema mostrará que hay 25 unidades disponibles.
+&nbsp;&nbsp;&nbsp;&nbsp;Suponiendo que el producto "PROD-101" tiene 25 unidades en el almacén de Sevilla, cuando el empleado consulte su stock en dicho almacén el sistema mostrará que hay 25 unidades disponibles.
 
 [Prueba de aceptación negativa — PAN-03.1]
 
