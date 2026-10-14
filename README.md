@@ -255,6 +255,7 @@ Cuando se intenta registrar un usuario como cliente y empleado al mismo tiempo, 
 
 
 
+
 #### 4.1.1. Requisitos de información
 
 
@@ -377,6 +378,7 @@ El auditor de compras registra una línea de compra con 100 unidades de un artí
 
 __Prueba de aceptación negativa__ 
 El auditor ingresa un coste unitario con letras en lugar de números; el sistema detecta un error de tipo de dato y no permite guardar la línea de compra.
+
 
 
 
