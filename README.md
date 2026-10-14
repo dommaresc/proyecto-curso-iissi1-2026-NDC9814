@@ -261,7 +261,7 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Se probará a registrar un usuario con correo electrónico todavía no registrado en la base de datos y se le asignará el tipo "cliente". El sistema creará el perfil con éxito y podrá ser consultado.
 
-[Prueba de aceptación negativa — PAN-10.1]
+[Prueba de aceptación negativa — PAN-10.1]  
 
 &nbsp;&nbsp;&nbsp;&nbsp;Se probará a registrar un usuario como cliente y empleado al mismo tiempo. El sistema rechazará la operación, mandando un mensaje de error e informando de que ambas categorías son excluyentes.
 
@@ -275,10 +275,12 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del sistema quiero gestionar los perfiles de usuario, roles y datos de acceso de los usuarios para garantizar la seguridad de la información de cada uno de los usuarios y restringir las operaciones según el rol de cada empleado.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-01.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador crea un nuevo usuario asignándole un rol y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esos datos restringiendo las funciones de administración.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-01.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío, esto provoca que el sistema rechace el registro y muestre un mensaje de error indicando que el campo es obligatorio.
 
 
@@ -286,10 +288,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-02.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de ventas ingresa el nombre, dirección y teléfono de un nuevo cliente, el sistema almacena correctamente la información y la muestra disponible al crear un pedido.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-02.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de ventas introduce un número de teléfono con letras y caracteres no válidos, el sistema bloquea el guardado y manda un mensaje de alerta de formato incorrecto.
 
 
@@ -297,10 +301,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de los empleados quiero mantener actualizada la información personal, laboral y de turnos del personal del almacén para controlar la asignación de tareas y roles de cada uno de ellos y poder ver cual es el rendimiento de los trabajadores.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-03.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador registra a un nuevo empleado asignándolo al turno de la mañana, el sistema acepta el registro y actualiza la lista de personal activo en el almacén.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-03.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta registrar a un empleado con un número de DNI que ya está registrado en el sistema, por lo tanto el sistema rechaza la operación por duplicidad.
 
 
@@ -308,10 +314,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del inventario quiero registrar las características detalladas de cada artículo como por ejemplo: dimensiones, peso y precio; para identificar, ubicar y vender correctamente la mercancía disponible en el almacén.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-04.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El gestor de inventario da de alta un producto introduciendo supeso, dimensiones y precio de venta, el sistema crea el registro completo y genera datos para guardar correctamente el producto.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-04.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El gestor de inventario intenta registrar un producto indicando un precio de venta con valor negativo, lo que provoca que el sistema detecte el error y rechace la inserción del producto.
 
 
@@ -319,10 +327,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del catálogo de productos quiero organizar los productos en categorías para facilitar la búsqueda y el análisis del stock necesario por tipos de productos.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-05.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador del catálogo crea una categoría principal llamada "Electrónica" y una subcategoría "Smartphones", el sistema asocia correctamente la jerarquía en el árbol de categorías.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-05.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta eliminar una categoría que actualmente tiene productos activos vinculados. Esto provoca que el sistema impida la eliminación y advierta que debe reubicar o cambiar de categoría los productos primero.
 
 
@@ -330,10 +340,13 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de almacenaje quiero gestionar las zonas, pasillos y ubicaciones físicas del almacén para optimizar las rutas de recogida y la distribución del espacio disponible para cada categoría de productos disponibles.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-06.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El supervisor del almacén configura una nueva ubicación física indicando Zona A, Pasillo 3 y Estantería 2, el sistema registra la ubicación como disponible para almacenar mercancía.
 
-__Prueba de aceptación negativa:__ 
+
+[Prueba de aceptación negativa — PAN-06.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El supervisor intenta crear una ubicación asignando una estantería que ya existe exactamente igual en la misma zona, el sistema rechaza el registro por conflicto de duplicidad de espacios.
 
 
@@ -341,10 +354,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como gestor de inventario quiero poder controlar en tiempo real la disponibilidad, las entradas, las ventas y la cantidad mínimos de cada prodcuto para evitar llegar a un stock nulo y planificar un reabastecimiento de los productos los cuales están llegando al mínimo de disponibilidad.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-07.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;Un operario registra la entrada física de 50 unidades de un producto, el sistema actualiza automáticamente el stock actual sumando las unidades y desactivando la alerta de stock bajo.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-07.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;Un operario intenta registrar la salida de 30 unidades de un producto cuando el stock disponible es de solo 10 unidades, el sistema bloquea la transacción por falta de existencias suficientes.
 
 
@@ -352,10 +367,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable del almacén quiero administrar la información de contacto, plazos de entrega y condiciones de los proveedores para coordinar las compras de mercancía de manera eficiente, para poder hacer un seguimiento de los productos que nos ofrecen los proveedores.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-08.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de compras registra un proveedor nuevo con su NIF y un plazo de entrega de 5 días hábiles, el sistema guarda los datos comerciales de forma correcta.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-08.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de compras deja en blanco el campo del NIF obligatorio al intentar dar de alta al proveedor; el sistema no permite guardar el registro y destaca el campo faltante.
 
 
@@ -363,10 +380,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador en los envíos de porductos a los clientes quiero registrar y hacer seguimiento del estado de los pedidos de venta (pendiente, en preparación, enviado, entregado) para cumplir con los plazos de entrega acordado previamente con el cliente a la hora de realizar el pedido.
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-09.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El especialista en envíos cambia el estado de un pedido de "En preparación" a "Enviado" tras la salida del producto del almacén, el sistema actualiza el estado y registra la fecha de salida.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-09.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;El especialista en envíos intenta marcar un pedido como "Entregado" sin haber seleccionado previamente un cliente ni productos asociados, el sistema rechaza la acción por estar incompleta la orden.
 
 
@@ -374,10 +393,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como gestor de la venta de los productos quiero detallar cada producto, cantidad y precio de cada venta específica para poder controlar automáticamente el stock correspondiente y poder gestionar los productos en venta disponibles .
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-10.1]
+
 &nbsp;&nbsp;&nbsp;&nbsp;Al procesar una venta, el gestor añade 3 unidades del producto A a un precio unitario de 20€, el sistema calcula automáticamente el precio total que sería 60€ y descuenta esas 3 unidades del stock.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-10.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El usuario introduce una cantidad de venta igual a cero para un artículo en la línea de venta, el sistema rechaza la línea indicando que la cantidad mínima debe ser al menos 1.
 
 
@@ -385,10 +406,12 @@ __Prueba de aceptación negativa:__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de compras quiero registrar las cantidades específicas y los costes acordados para cada artículo de compra realizado por cada proveedor para verificar que la recepción de la mercancía ha sido correcta y actualizar los costes de los productos dsiponibles en el inventario. 
 
-__Prueba de aceptación positiva:__ 
+[Prueba de aceptación positiva — PAP-11.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El gestor de compras registra una línea de compra con 100 unidades de un artículo a un coste acordado de 10€ por unidad, el sistema almacena la línea y calcula el importe total de la compra que sería de 1000€.
 
-__Prueba de aceptación negativa:__ 
+[Prueba de aceptación negativa — PAN-11.1] 
+
 &nbsp;&nbsp;&nbsp;&nbsp;El gestor de compras ingresa un coste unitario con letras en lugar de números, el sistema detecta un error de tipo de dato y no permite guardar la línea de compra.
 
 
