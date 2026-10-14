@@ -106,15 +106,15 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 &nbsp;&nbsp;&nbsp;&nbsp;El sistema de SmartStorage centraliza y automatiza la organización de la empresa bajo los siguiente principios:
 
-&nbsp;&nbsp;&nbsp;&nbsp;__Gestión de inventario por almacén:__ El sistema calcula y actualiza el stock físico de cada producto, registrando las entradas por compras y las salidas por ventas.
+&nbsp;&nbsp;&nbsp;&nbsp;__-Gestión de inventario por almacén:__ El sistema calcula y actualiza el stock físico de cada producto, registrando las entradas por compras y las salidas por ventas.
 
-&nbsp;&nbsp;&nbsp;&nbsp;__Validación de Procesos:__ El sistema bloquea de forma automática las operaciones no permitidas, como procesar ventas sin stock suficiente o registrar cantidad y precios menores o iguales que cero.
+&nbsp;&nbsp;&nbsp;&nbsp;__-Validación de Procesos:__ El sistema bloquea de forma automática las operaciones no permitidas, como procesar ventas sin stock suficiente o registrar cantidad y precios menores o iguales que cero.
 
-&nbsp;&nbsp;&nbsp;&nbsp;__Seguimiento del pedido:__ Todas las operaciones de entrada de mercancía y gestión de pedidos quedan vinculadas al empleado responsable y cliente correspondiente.
+&nbsp;&nbsp;&nbsp;&nbsp;__-Seguimiento del pedido:__ Todas las operaciones de entrada de mercancía y gestión de pedidos quedan vinculadas al empleado responsable y cliente correspondiente.
 
-&nbsp;&nbsp;&nbsp;&nbsp;__Exclusividad de datos:__ Para evitar que la información se duplique, cada producto debe tener un código único, los usuarios no pueden compartir el mismo correo electrónico y es obligatorio asignarle una categoría a cada artículo.
+&nbsp;&nbsp;&nbsp;&nbsp;__-Exclusividad de datos:__ Para evitar que la información se duplique, cada producto debe tener un código único, los usuarios no pueden compartir el mismo correo electrónico y es obligatorio asignarle una categoría a cada artículo.
 
-&nbsp;&nbsp;&nbsp;&nbsp;__Registro de precios:__ Al confirmar un pedido de venta o registrar una línea de compra, los precios unitarios y costos se mantienen fijos para que no se pueda alterar el historial.
+&nbsp;&nbsp;&nbsp;&nbsp;__-Registro de precios:__ Al confirmar un pedido de venta o registrar una línea de compra, los precios unitarios y costos se mantienen fijos para que no se pueda alterar el historial.
 
   
 ### 3.2. Usuarios del sistema
@@ -426,63 +426,75 @@ Todo producto debe pertenecer obligatoriamente a una única categoria.
 
 **R.N.02. Tipos de usuario**
 
-Un usuario puede estar registrado como cliente o como empleado, pero nunca como ambos al mismo tiempo.
+&nbsp;&nbsp;&nbsp;&nbsp;Un usuario puede estar registrado como cliente o como empleado, pero nunca como ambos al mismo tiempo.
 
 **R.N.03. Gestión de pedidos**
 
-Todo pedido debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
+&nbsp;&nbsp;&nbsp;&nbsp;Todo pedido debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
 
 **R.N.04. Contenido de los pedidos**
 
-Todo pedido debe contener al menos una linea de venta, correspondiente a un producto solicitado por el cliente.
+&nbsp;&nbsp;&nbsp;&nbsp;Todo pedido debe contener al menos una linea de venta, correspondiente a un producto solicitado por el cliente.
 
 **R.N.05. Cantidades y precios de venta**
 
-En cada linea de venta, la cantidad solicitada debe ser mayor que cero y el precio unitario del producto también debe ser positivo.
+&nbsp;&nbsp;&nbsp;&nbsp;En cada linea de venta, la cantidad solicitada debe ser mayor que cero y el precio unitario del producto también debe ser positivo.
 
 **R.N.06. Precio válido de los productos**
 
-El precio de un producto no podrá ser negativo, evitando registrar artículos con valores económicos incorrectos.
+&nbsp;&nbsp;&nbsp;&nbsp;El precio de un producto no podrá ser negativo, evitando registrar artículos con valores económicos incorrectos.
 
 **R.N.07. Disponibilidad de inventario**
 
-No se podrá confirmar la venta de un producto si la cantidad solicitada supera las unidades disponibles en stock. En ese caso, el pedido deberá rechazarse o esperar hasta tener suficientes unidades.
+&nbsp;&nbsp;&nbsp;&nbsp;No se podrá confirmar la venta de un producto si la cantidad solicitada supera las unidades disponibles en stock. En ese caso, el pedido deberá rechazarse o esperar hasta tener suficientes unidades.
 
 ### 4.2. Mapa de historias de usuario (opcional)
-H.U.01: Como cliente, quiero consultar los productos disponibles para conocer los artículos que puedo comprar.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.01:__  El cliente entra a la plataforma y consulta qué productos hay disponibles y su precio.
 
-H.U.02: Como cliente, quiero realizar pedidos de productos para adquirir los artículos que necesito.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.02:__  El cliente elige los productos, indica las cantidades y ordena un pedido.
 
-H.U.03: Como cliente, quiero consultar el estado de mis pedidos para conocer su situación.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.03:__ El cliente consulta el estado de su pedido (en preparación, enviado, entregado)
 
-H.U.04: Como empleado, quiero consultar el stock de los productos para conocer las unidades disponibles en cada almacén.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.04:__ El empleado consulta el stock real que queda de cada producto en el almacén.
 
-H.U.05: Como empleado, quiero procesar los pedidos de los clientes para gestionar las ventas.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.05:__ El empleado coge los pedidos que han hecho los clientes, los procesa y valida la salida de mercancía del almacén.
 
-H.U.06: Como empleado, quiero registrar las compras recibidas de los proveedores para mantener actualizado el inventario.
+&nbsp;&nbsp;&nbsp;&nbsp;__H.U.06:__ El encargado del almacén registra la llegada de nuevos productos de los proveedores para reponer el inventario.
+
 
 ### 4.3. Requisitos no funcionales (opcional)
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+__R.N.F.01. Facilidad de uso__
 
-R.N.F.01. Facilidad de uso
+&nbsp;&nbsp;&nbsp;&nbsp;Como usuario, quiero que el sistema tenga una interfaz sencilla e intuitiva para poder utilizarlo sin dificultades.
 
-Como usuario, quiero que el sistema tenga una interfaz sencilla e intuitiva para poder utilizarlo sin dificultades.
+__R.N.F.02. Seguridad__
 
-R.N.F.02. Seguridad
+&nbsp;&nbsp;&nbsp;&nbsp;Como usuario, quiero que mis datos personales estén protegidos para evitar que otras personas puedan acceder a ellos sin autorización.
 
-Como usuario, quiero que mis datos personales estén protegidos para evitar que otras personas puedan acceder a ellos sin autorización.
+__R.N.F.03. Rendimiento__
 
-R.N.F.03. Rendimiento
+&nbsp;&nbsp;&nbsp;&nbsp;Como cliente, quiero que las consultas de productos se realicen rápidamente para poder consultar el catálogo sin largas esperas.
 
-Como cliente, quiero que las consultas de productos se realicen rápidamente para poder consultar el catálogo sin largas esperas.
+__R.N.F.04. Compatibilidad__
 
-R.N.F.04. Compatibilidad
+&nbsp;&nbsp;&nbsp;&nbsp;Como usuario, quiero que el sistema funcione en distintos navegadores web para poder acceder a él desde diferentes ordenadores.
 
-Como usuario, quiero que el sistema funcione en distintos navegadores web para poder acceder a él desde diferentes ordenadores.
+__R.N.F.05 Disponibilidad__
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como usuario, quiero que la plataforma esté accesible de forma continua y así poder consultar el catálogo o gestionar el inventario en cualquier momento.
+
+__R.N.F.06 Tiempo de respuesta en las búsquedas__
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como empleado, quiero que las búsquedas específicas por código o nombre tarde menos de dos segundos en mostrar los resultados para agilizar el trabajo.
+
+__R.N.F.07 Recuperación ante fallos__
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como administrador del sistema, quiero que la plataforma cuente con mecanismos de copia de seguridad constantes para garantizar la seguridad del sistema en caso de fallo.
+
+__R.N.F.08 Adaptabilidad__
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como usuario, quiero que la interfaz de la plataforma se adapte tanto a pantallas de ordenador como teléfonos móviles para poder consultar su información desde cualquier dispositivo.
 
 -- fin entregable 1 --
 
