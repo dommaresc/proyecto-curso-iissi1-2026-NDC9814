@@ -265,6 +265,11 @@ para [razón]
 
 Como administrador del sistema quiero gestionar los perfiles de usuario, roles y datos de acceso de los usuarios para garantizar la seguridad de la información de cada uno de los usuarios y restringir las operaciones según el rol de cada empleado.
 
+## Prueba de aceptación ##
+Prueba que se cumple (Caso Éxito): El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+Prueba que no se cumple (Caso Fallido): El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+
+
 ##### R.I.02. Información de Cliente
 
 Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
