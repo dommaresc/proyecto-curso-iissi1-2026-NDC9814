@@ -21,7 +21,7 @@
 <br><br>
 
 
-__1.1 PROBLEMAS IDENTIFICADOS__
+### __1.1 PROBLEMAS IDENTIFICADOS__
 
 &nbsp;&nbsp;&nbsp;&nbsp;La falta de un sistema informático centralizado ha generado diversos problemas operativos graves:
 
@@ -45,7 +45,7 @@ __1.1 PROBLEMAS IDENTIFICADOS__
 <br><br>
 
 
-__1.2 CLIENTES Y USUARIOS DEL SISTEMA__
+### __1.2 CLIENTES Y USUARIOS DEL SISTEMA__
 
 &nbsp;&nbsp;&nbsp;&nbsp;El nuevo sistema interaccionará con tres grupos principales claramente diferenciados dentro del ámbito del problema:
 
@@ -61,7 +61,7 @@ __1.2 CLIENTES Y USUARIOS DEL SISTEMA__
 
 
 
-__1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
+### __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 &nbsp;&nbsp;&nbsp;&nbsp;Con el desarrollo del nuevo Sistema de Gestión de Almacén, se espera alcanzar los siguientes objetivos estratégicos:
 
@@ -268,7 +268,7 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 
 
-#### 4.1.1. Requisitos de información
+### 4.1.1. Requisitos de información
 
 
 ##### -R.I.01. Información de Usuario
@@ -417,7 +417,7 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 
 
-#### 4.1.2. Reglas de negocio
+### 4.1.2. Reglas de negocio
 
 
 **R.N.01. Clasificación de productos**
