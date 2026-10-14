@@ -199,7 +199,7 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 [Prueba de aceptación positiva — PAP-05.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Dado que el producto «PROD-101» está ubicado en el pasillo 2, estantería 3, cuando el operario consulte su ubicación, el sistema mostrará esos datos para facilitar su localización.
+&nbsp;&nbsp;&nbsp;&nbsp;Dado que el producto "PROD-101" está ubicado en el pasillo 2, estantería 3, cuando el operario consulte su ubicación, el sistema mostrará esos datos para facilitar su localización.
 
 [Prueba de aceptación negativa — PAN-05.1]
 
@@ -247,11 +247,11 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 [Prueba de aceptación positiva — PAP-09.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Tras seleccionar un estado válido para un pedido —«pendiente», «en preparación», «enviado» o «entregado»—, el empleado guarda la modificación y puede consultar posteriormente el nuevo estado del pedido.
+&nbsp;&nbsp;&nbsp;&nbsp;Cuando se selecciona un estado válido para un pedido ("pendiente", "en preparación", "enviado" o "entregado"), el empleado guardará la modificación y podrá consultar posteriormente el nuevo estado del pedido.
 
 [Prueba de aceptación negativa — PAN-09.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Si el empleado introduce un estado no admitido, como «en ruta», el sistema rechaza la modificación, muestra un mensaje de error y conserva el estado anterior del pedido.
+&nbsp;&nbsp;&nbsp;&nbsp;Si el empleado introduce un estado no admitido, como "en ruta", el sistema rechazará la modificación, mostrará un mensaje de error y conservará el estado anterior del pedido.
 
 #### ·RF-10. Registrar usuarios y controlar sus tipos
 
@@ -259,11 +259,11 @@ __1.3 EXPECTATIVAS Y OBJETIVOS DEL NUEVO SISTEMA__
 
 [Prueba de aceptación positiva — PAP-10.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Al registrar un usuario con un correo electrónico que todavía no está asociado a ninguna cuenta y asignarle el tipo «cliente», el sistema crea el perfil correctamente y permite consultarlo posteriormente.
+&nbsp;&nbsp;&nbsp;&nbsp;Se probará a registrar un usuario con correo electrónico todavía no registrado en la base de datos y se le asignará el tipo "cliente". El sistema creará el perfil con éxito y podrá ser consultado.
 
 [Prueba de aceptación negativa — PAN-10.1]
 
-&nbsp;&nbsp;&nbsp;&nbsp;Cuando se intenta registrar un usuario como cliente y empleado al mismo tiempo, el sistema rechaza la operación e informa de que ambos tipos de usuario son excluyentes.
+&nbsp;&nbsp;&nbsp;&nbsp;Se probará a registrar un usuario como cliente y empleado al mismo tiempo. El sistema rechazará la operación, mandando un mensaje de error e informando de que ambas categorías son excluyentes.
 
 
 
