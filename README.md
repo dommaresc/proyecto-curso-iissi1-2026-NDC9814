@@ -274,10 +274,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El responsable de ventas ingresa el nombre, dirección válida y teléfono de un nuevo cliente; el sistema almacena correctamente la información y la muestra disponible al crear un pedido de salida.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El responsable de ventas introduce un número de teléfono con letras y caracteres no válidos; el sistema bloquea el guardado y emite una alerta de formato incorrecto.
 
 
 ##### -R.I.03. Información de Empleado
@@ -285,10 +285,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como responsable de los empleados quiero mantener actualizada la información personal, laboral y de turnos del personal del almacén para controlar la asignación de tareas y roles de cada uno de ellos y poder ver cual es el rendimiento de los trabajadores.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+l jefe de recursos humanos registra a un nuevo operario asignándolo al turno de la mañana; el sistema procesa el alta y actualiza la lista de personal activo en el almacén.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El jefe de recursos humanos intenta registrar a un empleado con un número de documento de identidad (DNI) que ya está registrado en el sistema; el sistema rechaza la operación por duplicidad.
 
 
 ##### -R.I.04. Información de Producto
@@ -296,10 +296,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como administrador del inventario quiero registrar las características detalladas de cada artículo como por ejemplo: dimensiones, peso y precio; para identificar, ubicar y vender correctamente la mercancía disponible en el almacén.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El gestor de inventario da de alta un producto introduciendo su SKU único, peso, dimensiones y precio de venta; el sistema crea el registro completo y genera su código de barras asociado.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El gestor de inventario intenta registrar un producto indicando un precio de venta con valor negativo; el sistema detecta el error lógico y rechaza la inserción del producto.
 
 
 ##### -R.I.05. Información de Categoría
@@ -307,10 +307,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como administrador del catálogo de productos quiero organizar los productos en categorías para facilitar la búsqueda y el análisis del stock necesario por tipos de productos.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El administrador del catálogo crea una categoría principal llamada "Electrónica" y una subcategoría "Smartphones"; el sistema asocia correctamente la jerarquía en el árbol de categorías.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El administrador intenta eliminar una categoría que actualmente tiene productos activos vinculados; el sistema impide la eliminación y advierte que debe reubicar o desvincular los productos primero.
 
 
 ##### -R.I.06. Información de Almacén
@@ -318,10 +318,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como responsable de almacenaje quiero gestionar las zonas, pasillos y ubicaciones físicas del almacén para optimizar las rutas de recogida y la distribución del espacio disponible para cada categoría de productos disponibles.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El supervisor de logística configura una nueva ubicación física indicando Zona A, Pasillo 3 y Estantería 2; el sistema registra la ubicación como disponible para almacenar mercancía.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El supervisor intenta crear una ubicación asignando un código de estantería que ya existe exactamente igual en la misma zona; el sistema rechaza el registro por conflicto de duplicidad de espacios.
 
 
 ##### -R.I.07. Información de Stock
@@ -329,10 +329,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como gestor de inventario quiero poder controlar en tiempo real la disponibilidad, las entradas, las ventas y la cantidad mínimos de cada prodcuto para evitar llegar a un stock nulo y planificar un reabastecimiento de los productos los cuales están llegando al mínimo de disponibilidad.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+Un operario registra la entrada física de 50 unidades de un producto; el sistema actualiza automáticamente el stock actual sumando las unidades y desactivando la alerta de stock bajo.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+Un operario intenta registrar la salida de 30 unidades de un producto cuando el stock disponible es de solo 10 unidades; el sistema bloquea la transacción por falta de existencias suficientes.
 
 
 ##### -R.I.08. Información de Proveedor
@@ -340,10 +340,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como responsable del almacén quiero administrar la información de contacto, plazos de entrega y condiciones de los proveedores para coordinar las compras de mercancía de manera eficiente, para poder hacer un seguimiento de los productos que nos ofrecen los proveedores.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El comprador corporativo registra un proveedor nuevo con su razón social, CUIT/NIF y un plazo de entrega de 5 días hábiles; el sistema guarda los datos comerciales de forma correcta.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El comprador deja en blanco el campo de razón social obligatoria al intentar dar de alta al proveedor; el sistema no permite guardar el registro y resalta el campo faltante.
 
 
 ##### -R.I.09. Información de Pedido
@@ -351,10 +351,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como administrador en los envíos de porductos a los clientes quiero registrar y hacer seguimiento del estado de los pedidos de venta (pendiente, en preparación, enviado, entregado) para cumplir con los plazos de entrega acordado previamente con el cliente a la hora de realizar el pedido.
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El especialista en expediciones cambia el estado de un pedido de "En preparación" a "Enviado" tras despacharlo; el sistema actualiza el estado y registra la fecha de salida.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El especialista intenta marcar un pedido como "Entregado" sin haber seleccionado previamente un cliente ni productos asociados; el sistema rechaza la acción por estar incompleta la orden.
 
 
 ##### -R.I.10. Información de Línea de Venta
@@ -362,10 +362,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como gestor de la venta de los productos quiero detallar cada producto, cantidad y precio de cada venta específica para poder controlar automáticamente el stock correspondiente y poder gestionar los productos en venta disponibles .
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+Al procesar una venta, el gestor añade 3 unidades del producto A a un precio unitario de 20; el sistema calcula automáticamente el subtotal (60) y descuenta esas 3 unidades del stock.
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El usuario introduce una cantidad de venta igual a cero (0) para un artículo en la línea de venta; el sistema rechaza la línea indicando que la cantidad mínima debe ser al menos 1.
 
 
 ##### -R.I.11. Información de Línea de Compra
@@ -373,10 +373,10 @@ El administrador intenta crear un usuario nuevo dejando el campo de correo elect
 Como responsable de compras quiero registrar las cantidades específicas y los costes acordados para cada artículo de compra realizado por cada proveedor para verificar que la recepción de la mercancía ha sido correcta y actualizar los costes de los productos dsiponibles en el inventario. 
 
 __Prueba de aceptación positiva__ 
-El administrador crea un nuevo usuario asignándole el rol de "Operario" y una contraseña segura; el sistema guarda el registro exitosamente y permite iniciar sesión con esas credenciales restringiendo las funciones de administración.
+El auditor de compras registra una línea de compra con 100 unidades de un artículo a un coste acordado de 10 por unidad; el sistema almacena la línea y calcula el importe total de la compra (1000).
 
 __Prueba de aceptación negativa__ 
-El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
+El auditor ingresa un coste unitario con letras en lugar de números; el sistema detecta un error de tipo de dato y no permite guardar la línea de compra.
 
 
 
