@@ -253,10 +253,12 @@ Al registrar un usuario con un correo electrónico que todavía no está asociad
 
 Cuando se intenta registrar un usuario como cliente y empleado al mismo tiempo, el sistema rechaza la operación e informa de que ambos tipos de usuario son excluyentes.
 
+
+
 #### 4.1.1. Requisitos de información
 
 
-##### R.I.01. Información de Usuario
+##### -R.I.01. Información de Usuario
 
 Como administrador del sistema quiero gestionar los perfiles de usuario, roles y datos de acceso de los usuarios para garantizar la seguridad de la información de cada uno de los usuarios y restringir las operaciones según el rol de cada empleado.
 
@@ -267,7 +269,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.02. Información de Cliente
+##### -R.I.02. Información de Cliente
 
 Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
 
@@ -278,7 +280,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.03. Información de Empleado
+##### -R.I.03. Información de Empleado
 
 Como responsable de los empleados quiero mantener actualizada la información personal, laboral y de turnos del personal del almacén para controlar la asignación de tareas y roles de cada uno de ellos y poder ver cual es el rendimiento de los trabajadores.
 
@@ -289,7 +291,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.04. Información de Producto
+##### -R.I.04. Información de Producto
 
 Como administrador del inventario quiero registrar las características detalladas de cada artículo como por ejemplo: dimensiones, peso y precio; para identificar, ubicar y vender correctamente la mercancía disponible en el almacén.
 
@@ -300,7 +302,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.05. Información de Categoría
+##### -R.I.05. Información de Categoría
 
 Como administrador del catálogo de productos quiero organizar los productos en categorías para facilitar la búsqueda y el análisis del stock necesario por tipos de productos.
 
@@ -311,7 +313,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.06. Información de Almacén
+##### -R.I.06. Información de Almacén
 
 Como responsable de almacenaje quiero gestionar las zonas, pasillos y ubicaciones físicas del almacén para optimizar las rutas de recogida y la distribución del espacio disponible para cada categoría de productos disponibles.
 
@@ -322,7 +324,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.07. Información de Stock
+##### -R.I.07. Información de Stock
 
 Como gestor de inventario quiero poder controlar en tiempo real la disponibilidad, las entradas, las ventas y la cantidad mínimos de cada prodcuto para evitar llegar a un stock nulo y planificar un reabastecimiento de los productos los cuales están llegando al mínimo de disponibilidad.
 
@@ -333,7 +335,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.08. Información de Proveedor
+##### -R.I.08. Información de Proveedor
 
 Como responsable del almacén quiero administrar la información de contacto, plazos de entrega y condiciones de los proveedores para coordinar las compras de mercancía de manera eficiente, para poder hacer un seguimiento de los productos que nos ofrecen los proveedores.
 
@@ -344,7 +346,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.09. Información de Pedido
+##### -R.I.09. Información de Pedido
 
 Como administrador en los envíos de porductos a los clientes quiero registrar y hacer seguimiento del estado de los pedidos de venta (pendiente, en preparación, enviado, entregado) para cumplir con los plazos de entrega acordado previamente con el cliente a la hora de realizar el pedido.
 
@@ -355,7 +357,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.10. Información de Línea de Venta
+##### -R.I.10. Información de Línea de Venta
 
 Como gestor de la venta de los productos quiero detallar cada producto, cantidad y precio de cada venta específica para poder controlar automáticamente el stock correspondiente y poder gestionar los productos en venta disponibles .
 
@@ -366,7 +368,7 @@ __Prueba de aceptación negativa__
 El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío; el sistema rechaza el registro y muestra un mensaje de error indicando que el campo es obligatorio.
 
 
-##### R.I.11. Información de Línea de Compra
+##### -R.I.11. Información de Línea de Compra
 
 Como responsable de compras quiero registrar las cantidades específicas y los costes acordados para cada artículo de compra realizado por cada proveedor para verificar que la recepción de la mercancía ha sido correcta y actualizar los costes de los productos dsiponibles en el inventario. 
 
