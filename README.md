@@ -189,10 +189,6 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Suponemos que el encargado está registrando una recepción de mercancías, si introduce una cantidad igual a cero, entonces el sistema rechazará la operación, informará del error y mantendrá sin cambios el stock anterior.
 
-[Prueba de aceptación negativa — PAN-04.2]
-
-&nbsp;&nbsp;&nbsp;&nbsp;Suponemos que el encargado está registrando una recepción de mercancías, si introduce una cantidad igual a cero, entonces el sistema rechazará la operación, informará del error y mantendrá sin cambios el stock anterior.
-
 #### ·RF-05. Consultar la ubicación de un producto
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como operario de almacén, quiero consultar la ubicación física de un producto, para localizarlo rápidamente durante la preparación de los pedidos.
