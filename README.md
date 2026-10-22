@@ -151,7 +151,7 @@
 
 #### ·RF-02. Registrar productos en el sistema
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como administrador del inventario, quiero registrar nuevos productos con un código único, un nombre, un precio y una categoría, para mantener actualizado el catálogo de artículos.
+&nbsp;&nbsp;&nbsp;&nbsp;Como administrador del inventario, quiero consultar el registro de nuevos productos con un código único, un nombre, un precio y una categoría, para mantener actualizado el catálogo de artículos.
 
 [Prueba de aceptación positiva — PAP-02.1]
 
@@ -160,10 +160,6 @@
 [Prueba de aceptación negativa — PAN-02.1]
 
 &nbsp;&nbsp;&nbsp;&nbsp;Dado que el código «PROD-101» ya pertenece a otro producto, cuando el administrador intenta registrar un segundo producto con ese mismo código, el sistema rechaza el registro e informa de que el código ya existe.
-
-[Prueba de aceptación negativa — PAN-02.2]
-
-&nbsp;&nbsp;&nbsp;&nbsp;Dado que el código «PROD-101» no está registrado pero la categoría no existe, cuando el administrador intenta registrar el producto, el sistema rechaza el registro e informa de que la categoría no existe.
 
 #### ·RF-03. Consultar el stock por producto y almacén
 
@@ -179,7 +175,7 @@
 
 #### ·RF-04. Registrar la recepción de mercancías de un proveedor
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como encargado de almacén, quiero registrar las mercancías recibidas de los proveedores indicando el producto, la cantidad, el coste unitario y el almacén de destino, para mantener actualizado el inventario.
+&nbsp;&nbsp;&nbsp;&nbsp;Como encargado de almacén, quiero consultar el registro de las mercancías recibidas de los proveedores indicando el producto, la cantidad, el coste unitario y el almacén de destino, para mantener actualizado el inventario.
 
 [Prueba de aceptación positiva — PAP-04.1]
 
@@ -203,7 +199,7 @@
 
 #### ·RF-06. Crear pedidos de clientes
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como cliente, quiero crear un pedido que contenga uno o varios productos y sus cantidades, para solicitar la compra de los artículos que necesito.
+&nbsp;&nbsp;&nbsp;&nbsp;Como cliente, quiero poder realizar una búsqueda de productos para poder crear un pedido que contenga uno o varios productos y sus cantidades, para solicitar la compra de los artículos que necesito.
 
 [Prueba de aceptación positiva — PAP-06.1]
 
@@ -215,7 +211,7 @@
 
 #### ·RF-07. Validar el stock antes de confirmar una venta
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como empleado responsable de procesar pedidos, quiero que el sistema compruebe la disponibilidad de los productos antes de confirmar una venta, para evitar comprometer mercancía que no existe en el inventario.
+&nbsp;&nbsp;&nbsp;&nbsp;Como empleado responsable de procesar pedidos, quiero poder consultar la disponibilidad de los productos antes de confirmar una venta, para evitar comprometer mercancía que no existe en el inventario.
 
 [Prueba de aceptación positiva — PAP-07.1]
 
@@ -227,7 +223,7 @@
 
 #### ·RF-08. Validar los productos durante la preparación de un pedido
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como operario de almacén, quiero comprobar que los productos y las cantidades recogidos coinciden con las líneas del pedido, para evitar enviar artículos incorrectos a los clientes.
+&nbsp;&nbsp;&nbsp;&nbsp;Como operario de almacén, quiero consultar que los productos y las cantidades recogidos coinciden con las líneas del pedido, para evitar enviar artículos incorrectos a los clientes.
 
 [Prueba de aceptación positiva — PAP-08.1]
 
@@ -251,7 +247,7 @@
 
 #### ·RF-10. Registrar usuarios y controlar sus tipos
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como administrador del sistema, quiero registrar usuarios con un correo electrónico único y asignarles un tipo de usuario, cliente o empleado, para mantener sus perfiles identificados y evitar duplicidades.
+&nbsp;&nbsp;&nbsp;&nbsp;Como administrador del sistema, quiero consultar los registros de los usuarios con un correo electrónico único y asignarles un tipo de usuario, cliente o empleado, para mantener sus perfiles identificados y evitar duplicidades.
 
 [Prueba de aceptación positiva — PAP-10.1]
 
