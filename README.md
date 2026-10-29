@@ -263,7 +263,7 @@
 ### 4.1.1. Requisitos de información
 
 
-##### -R.I.01. Información de Usuario
+##### ·R.I.01. Información de Usuario
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del sistema quiero gestionar los perfiles de usuario, roles y datos de acceso de los usuarios para garantizar la seguridad de la información de cada uno de los usuarios y restringir las operaciones según el rol de cada empleado.
 
@@ -276,7 +276,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta crear un usuario nuevo dejando el campo de correo electrónico vacío, esto provoca que el sistema rechace el registro y muestre un mensaje de error indicando que el campo es obligatorio.
 
 
-##### -R.I.02. Información de Cliente
+##### ·R.I.02. Información de Cliente
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de ventas quiero registrar y consultar los datos de contacto, dirección y preferencias de los clientes para controlar los pedidos de salida con precisión y realizar un seguimiento de cada solicitud de pedido de cada cliente.
 
@@ -289,7 +289,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de ventas introduce un número de teléfono con letras y caracteres no válidos, el sistema bloquea el guardado y manda un mensaje de alerta de formato incorrecto.
 
 
-##### -R.I.03. Información de Empleado
+##### ·R.I.03. Información de Empleado
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de los empleados quiero mantener actualizada la información personal, laboral y de turnos del personal del almacén para controlar la asignación de tareas y roles de cada uno de ellos y poder ver cual es el rendimiento de los trabajadores.
 
@@ -302,7 +302,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta registrar a un empleado con un número de DNI que ya está registrado en el sistema, por lo tanto el sistema rechaza la operación por duplicidad.
 
 
-##### -R.I.04. Información de Producto
+##### ·R.I.04. Información de Producto
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del inventario quiero registrar las características detalladas de cada artículo como por ejemplo: dimensiones, peso y precio; para identificar, ubicar y vender correctamente la mercancía disponible en el almacén.
 
@@ -315,7 +315,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El gestor de inventario intenta registrar un producto indicando un precio de venta con valor negativo, lo que provoca que el sistema detecte el error y rechace la inserción del producto.
 
 
-##### -R.I.05. Información de Categoría
+##### ·R.I.05. Información de Categoría
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador del catálogo de productos quiero organizar los productos en categorías para facilitar la búsqueda y el análisis del stock necesario por tipos de productos.
 
@@ -328,7 +328,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El administrador intenta eliminar una categoría que actualmente tiene productos activos vinculados. Esto provoca que el sistema impida la eliminación y advierta que debe reubicar o cambiar de categoría los productos primero.
 
 
-##### -R.I.06. Información de Almacén
+##### ·R.I.06. Información de Almacén
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de almacenaje quiero gestionar las zonas, pasillos y ubicaciones físicas del almacén para optimizar las rutas de recogida y la distribución del espacio disponible para cada categoría de productos disponibles.
 
@@ -342,7 +342,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El supervisor intenta crear una ubicación asignando una estantería que ya existe exactamente igual en la misma zona, el sistema rechaza el registro por conflicto de duplicidad de espacios.
 
 
-##### -R.I.07. Información de Stock
+##### ·R.I.07. Información de Stock
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como gestor de inventario quiero poder controlar en tiempo real la disponibilidad, las entradas, las ventas y la cantidad mínimos de cada prodcuto para evitar llegar a un stock nulo y planificar un reabastecimiento de los productos los cuales están llegando al mínimo de disponibilidad.
 
@@ -355,7 +355,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Un operario intenta registrar la salida de 30 unidades de un producto cuando el stock disponible es de solo 10 unidades, el sistema bloquea la transacción por falta de existencias suficientes.
 
 
-##### -R.I.08. Información de Proveedor
+##### ·R.I.08. Información de Proveedor
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable del almacén quiero administrar la información de contacto, plazos de entrega y condiciones de los proveedores para coordinar las compras de mercancía de manera eficiente, para poder hacer un seguimiento de los productos que nos ofrecen los proveedores.
 
@@ -368,7 +368,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El responsable de compras deja en blanco el campo del NIF obligatorio al intentar dar de alta al proveedor; el sistema no permite guardar el registro y destaca el campo faltante.
 
 
-##### -R.I.09. Información de Pedido
+##### ·R.I.09. Información de Pedido
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como administrador en los envíos de porductos a los clientes quiero registrar y hacer seguimiento del estado de los pedidos de venta (pendiente, en preparación, enviado, entregado) para cumplir con los plazos de entrega acordado previamente con el cliente a la hora de realizar el pedido.
 
@@ -381,7 +381,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El especialista en envíos intenta marcar un pedido como "Entregado" sin haber seleccionado previamente un cliente ni productos asociados, el sistema rechaza la acción por estar incompleta la orden.
 
 
-##### -R.I.10. Información de Línea de Venta
+##### ·R.I.10. Información de Línea de Venta
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como gestor de la venta de los productos quiero detallar cada producto, cantidad y precio de cada venta específica para poder controlar automáticamente el stock correspondiente y poder gestionar los productos en venta disponibles .
 
@@ -394,7 +394,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;El usuario introduce una cantidad de venta igual a cero para un artículo en la línea de venta, el sistema rechaza la línea indicando que la cantidad mínima debe ser al menos 1.
 
 
-##### -R.I.11. Información de Línea de Compra
+##### ·R.I.11. Información de Línea de Compra
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como responsable de compras quiero registrar las cantidades específicas y los costes acordados para cada artículo de compra realizado por cada proveedor para verificar que la recepción de la mercancía ha sido correcta y actualizar los costes de los productos dsiponibles en el inventario. 
 
@@ -416,29 +416,88 @@
 
 Todo producto debe pertenecer obligatoriamente a una única categoria.
 
+[Prueba de aceptación positiva — PAP-01.1]
+
+Al registrar un nuevo producto en el sistema, si el administrador selecciona una categoría existente para asociarla a un artículo, el sistema guarda correctamente el producto en dicha categoría.
+
+[Prueba de aceptación negativa — PAP-01.1]
+
+Durante el alta de un nuevo producto, si el administrador intenta dejar el campo de categoría vacío o asignarle simultáneamente varias categorías, el sistema rechaza la operación e informa que el producto debe pertenecer a una única categoría. 
+
+
 **R.N.02. Tipos de usuario**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Un usuario puede estar registrado como cliente o como empleado, pero nunca como ambos al mismo tiempo.
+
+[Prueba de aceptación positiva — PAP-02.1]
+
+Al registrar un nuevo usuario en la plataforma con un correo único y asignarle el rol de "Cliente", el sistema crea el perfil con éxito como cliente sin registrarlo como empleado.
+
+[Prueba de aceptación negativa — PAP-02.1]
+
+Cuando un usuario intenta registrarse en el sistema indicando de forma simultánea los roles de "Cliente" y "Empleado", el sistema bloquea el registro y muestra un error indicando que ambas categorías no pueden ser seleccionadas al mismo tiempo.
+
 
 **R.N.03. Gestión de pedidos**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Todo pedido debe estar asociado a un CLIENTE que lo realiza y a un EMPLEADO encargado de procesarlo.
 
+[Prueba de aceptación positiva — PAP-03.1]
+
+Tras realizar un pedido válido, si el empleado responsable lo procesa y se asignan ambos identificadores en el sistema, el pedido se guarda quedando vinculado el cliente y el empleado correspondiente
+
+[Prueba de aceptación negativa — PAP-03.1]
+
+Al intentar confirmar un pedido sin haber asignado un empleado encargado de procesarlo, el sistema rechaza la orden por estar incompleta y no permite guardarla
+
+
 **R.N.04. Contenido de los pedidos**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Todo pedido debe contener al menos una linea de venta, correspondiente a un producto solicitado por el cliente.
+
+[Prueba de aceptación positiva — PAP-04.1]
+
+Cuando un cliente crea una solicitud de compra y añade a su cesta al menos una línea de venta con un producto y cantidad válidos, el sistema acepta el pedido con éxito.
+
+[Prueba de aceptación negativa — PAP-04.1]
+
+En la situación de que un cliente intente confirmar un pedido cuya orden no incluye ninguna línea de venta, el sistema rechaza la operación y muestra un mensaje indicando que debe añadir al menos un producto.
 
 **R.N.05. Cantidades y precios de venta**
 
 &nbsp;&nbsp;&nbsp;&nbsp;En cada linea de venta, la cantidad solicitada debe ser mayor que cero y el precio unitario del producto también debe ser positivo.
 
+[Prueba de aceptación positiva — PAP-05.1]
+
+Al procesar una línea de venta introduciendo 3 unidades de un artículo a un precio de 20€(ambos mayores que cero), el sistema acepta la línea y calcula correctamente el total.
+
+[Prueba de aceptación negativa — PAP-05.1]
+
+Si el usuario añade un artículo la línea de venta indicando una cantidad igual a cero o un precio negativo, el sistema rechaza la línea indicando que la cantidad y el precio deben ser estrictamente mayores que cero
+
 **R.N.06. Precio válido de los productos**
 
 &nbsp;&nbsp;&nbsp;&nbsp;El precio de un producto no podrá ser negativo, evitando registrar artículos con valores económicos incorrectos.
 
+[Prueba de aceptación positiva — PAP-06.1]
+
+Al dar de alta un producto en el inventario con un precio de venta de 45€, el sistema valida que es un valor positivo y se almacena el artículo correctamente en el catálogo.
+
+[Prueba de aceptación negativa — PAP-06.1]
+
+Durante el registro de un artículo, si el usuario introduce un precio de venta con un valor negativo(por ejemplo, -10€), el sistema detecta el error mediante la restricción y rechaza la inserción del producto.
+
 **R.N.07. Disponibilidad de inventario**
 
 &nbsp;&nbsp;&nbsp;&nbsp;No se podrá confirmar la venta de un producto si la cantidad solicitada supera las unidades disponibles en stock. En ese caso, el pedido deberá rechazarse o esperar hasta tener suficientes unidades.
+
+[Prueba de aceptación positiva — PAP-07.1]
+
+Partiendo de un producto que cuenta con un stock de 10 unidades disponibles, al solicitar la compra de 4 unidades, el sistema acepta la transacción y actualiza automáticamente el inventario restando la cantidad vendida.
+
+[Prueba de aceptación negativa — PAP-07.1]
+
+Cuando se intenta confirmar una venta de 8 unidades de un producto del que únicamente se dispone de 5 unidades en stock, el sistema bloquea la operación por falta de existencias y mantiene intacto el inventario.
 
 ### 4.2. Mapa de historias de usuario (opcional)
 &nbsp;&nbsp;&nbsp;&nbsp;__H.U.01:__  El cliente entra a la plataforma y consulta qué productos hay disponibles y su precio.
