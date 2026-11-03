@@ -563,15 +563,20 @@ __R.N.F.08 Adaptabilidad__
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+|       | Entidades  | Asociaciones  | Restricciones  | 
+|:------|:-----------|:-----------|:-----------|
+| R.I.01. Información de Usuario  | Usuario<br>Cliente<br>Empleado  | X          | Correo no nulo y único<br>Cliente y Empleado exclusivos  |
+| R.I.02. Información de Cliente  | Cliente           | X          | -  |
+| R.I.03. Información de Empleado  | Empleado  | X          | DNI único  |
+| R.I.04. Información de Producto  | Producto  | X          | ID Producto único<br>Precio Producto >= 0  |
+| R.I.05. Información de Categoría  | Categoría<br>Producto  | X          | 1 Categoría por Producto<br>No eliminar categorías con productos activos  |
+| R.I.06. Información de Almacén  | Almacén<br>Ubicación  | X          | Sin ubicaciones duplicadas en una misma zona  |
+| R.I.07. Información de Stock  | Producto<br>Almacén<br>Stock  | X           | No vender más unidades de las disponibles  |
+| R.I.08. Información de Proveedor  | Producto<br>Proveedor<br>Línea de Compra  | X          | NIF de Proveedor no nulo  |
+| R.I.09. Información de Pedido  | Cliente<br>Empleado<br>Pedido<br>Línea de Venta  | X          | 1 Cliente y 1 Empleado por Pedido<br>1 Línea de Venta<br>Estado con valores permitidos  |
+| R.I.10. Información de Línea de Venta  | Producto<br>Pedido<br>Línea de Venta  | X          | Cantidad y Precio Unitario > 0  |
+| R.I.11. Información de Línea de Compra  | Empleado<br>Producto<br>Almacén<br>Proveedor<br>Línea de Compra  | X           | Cantidad > 0  |
+
 
 -- fin entregable 2 --
 
