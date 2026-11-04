@@ -560,6 +560,24 @@ __R.N.F.08 Adaptabilidad__
 
 - con descripción textual y diagrama de objetos UML.
 
+### - PRUEBA 1: Creación de un pedido y validación de stock
+
+  ## 1.1 Descripción textual
+
+  &nbsp;&nbsp;&nbsp;&nbsp; Un cliente registrado (José López) desea realiza un pedido de compra de 2 unidades del producto "Taladro" (PROD-101). El sistema comprueba mediante las reglas de negocio que haya stock suficiente en el inventario (hay 10 unidades disponibles). Al validarse correctamente, el sistema crea el objeto "Pedido", genera su "Línea de venta" correspondiente, vincula al cliente y al empleado encargado de procesarlo, y descuenta automáticamente las unidades del "Stock", dejando el pedido en estado "pendiente".
+
+  ## 1.2 Diagrama UML
+
+  
+### - PRUEBA 2: Registro de recepción de mercancía de un proveedor
+
+  ## 2.1 Descripción textual
+
+  &nbsp;&nbsp;&nbsp;&nbsp; Un camión de un proveedor habitual (Ferretería Manolo S.L.) llega al almacén central. El encargado de almacén (Carlos Gómez) registra la entrada de 50 nuevas del producto "Martillo" (PROD-202). El sistema crea una nueva "Línea de Compra" con el coste acordado, localiza el "Almacén" y actualiza "Stock" sumando las nuevas unidades al inventario físico disponible para que los operarios puedan volver a comerciazarlas.
+
+  ## 2.2 Diagrama UML
+
+
 ## 6. Matrices de trazabilidad
 
 - Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
