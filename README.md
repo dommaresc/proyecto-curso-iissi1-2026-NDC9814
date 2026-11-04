@@ -605,27 +605,27 @@ __R.N.F.08 Adaptabilidad__
 
 |       | Entidades  | Asociaciones  | Restricciones  |
 |:------|:-----------|:--------------|:---------------|
-| RF-01. Consultar el catálogo de productos |  |  |  |
-| RF-02. Registrar productos en el sistema |  |  |  |
-| RF-03. Consultar el stock por producto y almacén |  |  |  |
-| RF-04. Registrar la recepción de mercancías de un proveedor |  |  |  |
-| RF-05. Consultar la ubicación de un producto |  |  |  |
-| RF-06. Crear pedidos de clientes |  |  |  |
-| RF-07. Validar el stock antes de confirmar una venta |  |  |  |
-| RF-08. Validar los productos durante la preparación de un pedido |  |  |  |
-| RF-09. Gestionar el estado de los pedidos |  |  |  |
-| RF-10. Registrar usuarios y controlar sus tipos |  |  |  |
+| RF-01. Consultar el catálogo de productos | Producto, Categoría | Producto pertenece a Categoría | Mostrar productos de la categoría seleccionada |
+| RF-02. Registrar productos en el sistema | Producto, Categoría | Producto pertenece a Categoría | SKU único y categoría obligatoria |
+| RF-03. Consultar el stock por producto y almacén | Producto, Almacén, Stock  | Stock relaciona Producto y Almacén | Mostrar las unidades disponibles por almacén |
+| RF-04. Registrar la recepción de mercancías de un proveedor | Línea de Compra, Producto, Proveedor, Empleado, Almacén, Stock  | Proveedor suministra Producto; Empleado gestiona Línea de Compra; Línea de Compra abastece Almacén | Cantidad mayor que 0 y actualización del stock |
+| RF-05. Consultar la ubicación de un producto | Producto, Almacén | Producto se almacena en Almacén | Consultar zona y pasillo del producto |
+| RF-06. Crear pedidos de clientes | Cliente, Empleado, Pedido, Línea de Venta, Producto | Cliente realiza Pedido; Empleado procesa Pedido; Pedido contiene Línea de Venta | El pedido debe tener al menos una línea de venta |
+| RF-07. Validar el stock antes de confirmar una venta | Pedido, Línea de Venta, Producto, Stock, Almacén | Pedido contiene Línea de Venta; Stock relaciona Producto y Almacén | No vender más unidades de las disponibles |
+| RF-08. Validar los productos durante la preparación de un pedido | Pedido, Línea de Venta, Producto | Pedido contiene Línea de Venta; Línea de Venta incluye Producto | Comprobar productos y cantidades del pedido |
+| RF-09. Gestionar el estado de los pedidos | Pedido, Empleado | Empleado procesa Pedido | Solo permitir estados válidos |
+| RF-10. Registrar usuarios y controlar sus tipos | Usuario, Cliente, Empleado | Usuario se especializa en Cliente o Empleado | Email único y tipos de usuario excluyentes |
 
 
 |       | Entidades  | Asociaciones  | Restricciones  |
 |:------|:-----------|:--------------|:---------------|
-| R.N.01. Clasificación de productos |  |  |  |
-| R.N.02. Tipos de usuario |  |  |  |
-| R.N.03. Gestión de pedidos |  |  |  |
-| R.N.04. Contenido de los pedidos |  |  |  |
-| R.N.05. Cantidades y precios de venta |  |  |  |
-| R.N.06. Precio válido de los productos |  |  |  |
-| R.N.07. Disponibilidad de inventario |  |  |  |
+| R.N.01. Clasificación de productos | Producto, Categoría | Producto pertenece a Categoría | Cada producto tiene una única categoría |
+| R.N.02. Tipos de usuario | Usuario, Cliente, Empleado | Usuario se especializa en Cliente o Empleado | Un usuario no puede ser cliente y empleado a la vez |
+| R.N.03. Gestión de pedidos | Pedido, Cliente, Empleado | Cliente realiza Pedido; Empleado procesa Pedido | Cada pedido tiene un cliente y un empleado |
+| R.N.04. Contenido de los pedidos | Pedido, Línea de Venta | Pedido contiene Línea de Venta | Al menos una línea de venta por pedido |
+| R.N.05. Cantidades y precios de venta | Línea de Venta, Producto | Línea de Venta incluye Producto | Cantidad y precio unitario mayores que 0 |
+| R.N.06. Precio válido de los productos | Producto |  | Precio del producto mayor o igual que 0 |
+| R.N.07. Disponibilidad de inventario | Stock, Producto, Almacén, Pedido, Línea de Venta | Stock relaciona Producto y Almacén; Pedido contiene Línea de Venta | No confirmar ventas sin stock suficiente |
 
 
 -- fin entregable 2 --
