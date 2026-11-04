@@ -553,8 +553,11 @@ __R.N.F.08 Adaptabilidad__
 ## 5. Modelo conceptual
 
 ### 5.1. Diagramas de clases UML
-
-- con restricciones.
+<br><br>
+<p align="center">
+<img width="2000" height="1000" alt="Captura de pantalla 2026-11-04 115203" src="https://github.com/user-attachments/assets/fccb3119-d10d-4602-b0e2-1b1918154d39" />
+</p>
+<br><br>
 
 ### 5.2. Escenarios de prueba
 
