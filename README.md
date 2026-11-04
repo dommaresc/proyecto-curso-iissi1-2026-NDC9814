@@ -570,6 +570,8 @@ __R.N.F.08 Adaptabilidad__
   &nbsp;&nbsp;&nbsp;&nbsp; Un cliente registrado (José López) desea realiza un pedido de compra de 2 unidades del producto "Taladro" (PROD-101). El sistema comprueba mediante las reglas de negocio que haya stock suficiente en el inventario (hay 10 unidades disponibles). Al validarse correctamente, el sistema crea el objeto "Pedido", genera su "Línea de venta" correspondiente, vincula al cliente y al empleado encargado de procesarlo, y descuenta automáticamente las unidades del "Stock", dejando el pedido en estado "pendiente".
 
   ## 1.2 Diagrama UML
+<img width="1035" height="962" alt="Captura de pantalla 2026-11-04 131343" src="https://github.com/user-attachments/assets/e9cf38d1-1c24-4e1c-90fb-44488a940faa" />
+
 
   
 ### - PRUEBA 2: Registro de recepción de mercancía de un proveedor
@@ -579,6 +581,7 @@ __R.N.F.08 Adaptabilidad__
   &nbsp;&nbsp;&nbsp;&nbsp; Un camión de un proveedor habitual (Ferretería Manolo S.L.) llega al almacén central. El encargado de almacén (Carlos Gómez) registra la entrada de 50 nuevas del producto "Martillo" (PROD-202). El sistema crea una nueva "Línea de Compra" con el coste acordado, localiza el "Almacén" y actualiza "Stock" sumando las nuevas unidades al inventario físico disponible para que los operarios puedan volver a comerciazarlas.
 
   ## 2.2 Diagrama UML
+<img width="880" height="917" alt="Captura de pantalla 2026-11-04 131137" src="https://github.com/user-attachments/assets/afaccf2d-e1a8-4b90-a3aa-ce39c7f69b82" />
 
 
 ## 6. Matrices de trazabilidad
