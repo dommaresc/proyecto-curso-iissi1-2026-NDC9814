@@ -27,12 +27,13 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;__-Inexactitud del inventario__: Hay diferencias frecuentes entre la cantidad de stock anotado en las hojas de cálculo y la cantidad real de producto que hay en el almacén. Esto cauda faltas inesperadas o compras innecesarias.
   
-&nbsp;&nbsp;&nbsp;&nbsp;__-Pérdidas de tiempo__: Los operarios pierden una cantidad de tiempo considerable buscando mercancía en los almacenes, debido a que no hay un control a tiempo real de las ubicaciones del stock.
-  
-&nbsp;&nbsp;&nbsp;&nbsp;__-Errores en la preparación de pedidos__:  Si no hay una validación automática durante el proceso de empaque y envío, se mandan referencias incorrectas o cantidades equivocadas a los clientes finales.
-  
-&nbsp;&nbsp;&nbsp;&nbsp;__-Errores humanos por registro de datos__: Al pasar la información de los registros en papel a las hojas de cálculo, se cometen errores frecuentes de tipeo que corrompen el historial de entradas y salidas de mercancía.
+&nbsp;&nbsp;&nbsp;&nbsp;__Automatizar el control de inventario:__ Mantener el stock actualizado en tiempo real tras cada entrada, salida o reubicación de mercancía.
 
+&nbsp;&nbsp;&nbsp;&nbsp;__Reducir errores en pedidos:__ Validar el empaque y envío de productos para evitar referencias incorrectas o cantidades equivocadas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;__Agilizar la preparación de envíos:__ Optimizar la localización de los artículos para reducir los tiempos de búsqueda en el almacén.
+
+&nbsp;&nbsp;&nbsp;&nbsp;__Centralizar la información:__ Disponer de consultas y reportes en tiempo real sobre las operaciones y el estado de los pedidos.
 <br><br>
 
 <p align="center">
