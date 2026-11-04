@@ -428,7 +428,7 @@ Durante el alta de un nuevo producto, si el administrador intenta dejar el campo
 
 **R.N.02. Tipos de usuario**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Un usuario puede estar registrado como cliente o como empleado, pero nunca como ambos al mismo tiempo.
+&nbsp;&nbsp;&nbsp;&nbsp;Un usuario puede estar registrado como cliente, empleado o proveedor, pero nunca como varios al mismo tiempo.
 
 [Prueba de aceptación positiva — PAP-02.1]
 
