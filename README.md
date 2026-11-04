@@ -600,6 +600,31 @@ __R.N.F.08 Adaptabilidad__
 | R.I.11. Información de Línea de Compra  | Empleado<br>Producto<br>Almacén<br>Proveedor<br>Línea de Compra  | X           | Cantidad > 0  |
 
 
+|       | Entidades  | Asociaciones  | Restricciones  |
+|:------|:-----------|:--------------|:---------------|
+| RF-01. Consultar el catálogo de productos |  |  |  |
+| RF-02. Registrar productos en el sistema |  |  |  |
+| RF-03. Consultar el stock por producto y almacén |  |  |  |
+| RF-04. Registrar la recepción de mercancías de un proveedor |  |  |  |
+| RF-05. Consultar la ubicación de un producto |  |  |  |
+| RF-06. Crear pedidos de clientes |  |  |  |
+| RF-07. Validar el stock antes de confirmar una venta |  |  |  |
+| RF-08. Validar los productos durante la preparación de un pedido |  |  |  |
+| RF-09. Gestionar el estado de los pedidos |  |  |  |
+| RF-10. Registrar usuarios y controlar sus tipos |  |  |  |
+
+
+|       | Entidades  | Asociaciones  | Restricciones  |
+|:------|:-----------|:--------------|:---------------|
+| R.N.01. Clasificación de productos |  |  |  |
+| R.N.02. Tipos de usuario |  |  |  |
+| R.N.03. Gestión de pedidos |  |  |  |
+| R.N.04. Contenido de los pedidos |  |  |  |
+| R.N.05. Cantidades y precios de venta |  |  |  |
+| R.N.06. Precio válido de los productos |  |  |  |
+| R.N.07. Disponibilidad de inventario |  |  |  |
+
+
 -- fin entregable 2 --
 
 ## 7. Modelo relacional en 3FN
