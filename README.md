@@ -606,7 +606,7 @@ __R.N.F.08 Adaptabilidad__
 |       | Entidades  | Asociaciones  | Restricciones  |
 |:------|:-----------|:--------------|:---------------|
 | RF-01. Consultar el catálogo de productos | Producto, Categoría | Producto pertenece a Categoría | Mostrar productos de la categoría seleccionada |
-| RF-02. Registrar productos en el sistema | Producto, Categoría | Producto pertenece a Categoría | SKU único y categoría obligatoria |
+| RF-02. Registrar productos en el sistema | Producto, Categoría | Producto pertenece a Categoría |Identificador único del producto y categoría obligatoria |
 | RF-03. Consultar el stock por producto y almacén | Producto, Almacén, Stock  | Stock relaciona Producto y Almacén | Mostrar las unidades disponibles por almacén |
 | RF-04. Registrar la recepción de mercancías de un proveedor | Línea de Compra, Producto, Proveedor, Empleado, Almacén, Stock  | Proveedor suministra Producto; Empleado gestiona Línea de Compra; Línea de Compra abastece Almacén | Cantidad mayor que 0 y actualización del stock |
 | RF-05. Consultar la ubicación de un producto | Producto, Almacén | Producto se almacena en Almacén | Consultar zona y pasillo del producto |
