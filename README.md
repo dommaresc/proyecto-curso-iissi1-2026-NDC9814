@@ -624,7 +624,7 @@ __R.N.F.08 Adaptabilidad__
 | R.N.03. Gestión de pedidos | Pedido, Cliente, Empleado | Cliente realiza Pedido; Empleado procesa Pedido | Cada pedido tiene un cliente y un empleado |
 | R.N.04. Contenido de los pedidos | Pedido, Línea de Venta | Pedido contiene Línea de Venta | Al menos una línea de venta por pedido |
 | R.N.05. Cantidades y precios de venta | Línea de Venta, Producto | Línea de Venta incluye Producto | Cantidad y precio unitario mayores que 0 |
-| R.N.06. Precio válido de los productos | Producto |  | Precio del producto mayor o igual que 0 |
+| R.N.06. Precio válido de los productos | Producto | - | Precio del producto mayor o igual que 0 |
 | R.N.07. Disponibilidad de inventario | Stock, Producto, Almacén, Pedido, Línea de Venta | Stock relaciona Producto y Almacén; Pedido contiene Línea de Venta | No confirmar ventas sin stock suficiente |
 
 
